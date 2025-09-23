@@ -4,9 +4,10 @@
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title> Task Manager </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <!-- Remove the version display -->
+        <!-- <div>Quasar v{{ $q.version }}</div> -->
       </q-toolbar>
     </q-header>
 

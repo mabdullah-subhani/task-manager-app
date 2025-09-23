@@ -1,12 +1,23 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    component: () => import('layouts/AuthLayout.vue'),
+    children: [
+      { path: 'login', component: () => import('pages/LoginPage.vue') },
+      { path: 'register', component: () => import('pages/RegisterPage.vue') },
+      { path: '', redirect: '/login' }, // 👈 redirect root to login
+    ],
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
+  {
+    path: '/dashboard',
+    component: () => import('src/layouts/TaskManagerLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/DashboardPage.vue') },
+      { path: 'tasks', component: () => import('pages/TasksPage.vue') },
+      { path: 'tasks/add', component: () => import('pages/AddTaskPage.vue') },
+      { path: 'profile', component: () => import('pages/ProfilePage.vue') },
+    ],
+  },
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),

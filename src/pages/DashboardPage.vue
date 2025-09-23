@@ -1,0 +1,170 @@
+<template>
+  <q-page class="q-pa-md">
+    <!-- Welcome Header -->
+    <div class="row items-center q-mb-lg">
+      <div class="col">
+        <h4>Welcome, {{ user?.username || 'User' }}</h4>
+        <p class="text-subtitle2">Here’s a summary of your tasks</p>
+      </div>
+    </div>
+
+    <!-- Quick Stats Cards -->
+    <div class="row q-mb-lg q-gutter-md">
+      <q-card class="col-12 col-sm-6 col-md-3 bg-primary text-white">
+        <q-card-section>
+          <div class="text-h6">Total Tasks</div>
+          <div class="text-h4">{{ taskStore.totalElements }}</div>
+        </q-card-section>
+      </q-card>
+
+      <q-card class="col-12 col-sm-6 col-md-3 bg-positive text-white">
+        <q-card-section>
+          <div class="text-h6">Completed</div>
+          <div class="text-h4">{{ taskStore.completedTasks }}</div>
+        </q-card-section>
+      </q-card>
+
+      <q-card class="col-12 col-sm-6 col-md-3 bg-warning text-white">
+        <q-card-section>
+          <div class="text-h6">Pending</div>
+          <div class="text-h4">{{ taskStore.pendingTasks }}</div>
+        </q-card-section>
+      </q-card>
+    </div>
+
+    <!-- Recent Tasks Table -->
+    <q-card flat bordered>
+      <q-card-section>
+        <div class="text-h6 q-mb-md">Recent Tasks</div>
+        <q-table :rows="taskStore.tasks" :columns="columns" row-key="id" flat bordered>
+          <template v-slot:body-cell-actions="props">
+            <q-td align="right">
+              <q-btn dense flat color="primary" icon="edit" @click="openEditDialog(props.row)" />
+              <q-btn
+                dense
+                flat
+                color="negative"
+                icon="delete"
+                @click="taskStore.deleteTask(props.row.id)"
+              />
+            </q-td>
+          </template>
+          <template v-slot:body-cell-status="props">
+            <q-td :props="props">
+              <q-badge
+                :color="props.row.status === 'COMPLETED' ? 'green' : 'orange'"
+                align="center"
+                class="q-pa-sm text-white"
+                rounded
+              >
+                {{ props.row.status }}
+              </q-badge>
+            </q-td>
+          </template>
+        </q-table>
+      </q-card-section>
+    </q-card>
+
+    <!-- Edit Task Dialog -->
+    <q-dialog v-model="editDialog">
+      <q-card style="min-width: 400px">
+        <q-card-section>
+          <div class="text-h6">Edit Task</div>
+        </q-card-section>
+
+        <q-card-section class="q-gutter-md">
+          <q-input v-model="editTaskData.title" label="Title" filled />
+          <q-input v-model="editTaskData.description" label="Description" type="textarea" filled />
+          <q-select
+            v-model="editTaskData.status"
+            :options="['PENDING', 'COMPLETED']"
+            label="Status"
+            filled
+          />
+          <!-- Due Date & Time -->
+          <q-input
+            v-model="editTaskData.dueDateTime"
+            label="Due Date & Time"
+            type="datetime-local"
+            filled
+            required
+          />
+        </q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn flat label="Cancel" v-close-popup />
+          <q-btn color="primary" label="Save" @click="saveTaskUpdate" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+  </q-page>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useUserStore } from 'src/stores/user-store'
+import { useTaskStore } from 'src/stores/task-store'
+import { useQuasar } from 'quasar'
+import { formatDueDate, toDateTimeLocal } from 'src/utils/date-utils'
+
+const userStore = useUserStore()
+const user = userStore.user
+const taskStore = useTaskStore()
+const $q = useQuasar()
+
+// Table columns
+const columns = [
+  { name: 'title', label: 'Title', field: 'title', sortable: true },
+  { name: 'description', label: 'Description', field: 'description', sortable: true },
+  { name: 'status', label: 'Status', field: 'status', sortable: true },
+  { name: 'dueDate', label: 'Due Date', field: 'dueDate', sortable: true },
+  { name: 'actions', label: 'Actions', field: 'actions', sortable: false },
+]
+
+// Edit dialog state
+const editDialog = ref(false)
+const editTaskData = ref({})
+
+// Open edit dialog
+const openEditDialog = (task) => {
+  editTaskData.value = { ...task }
+  if (editTaskData.value.dueDate) {
+    editTaskData.value.dueDateTime = toDateTimeLocal(editTaskData.value.dueDate)
+  }
+  editDialog.value = true
+}
+
+// Save updated task
+const saveTaskUpdate = async () => {
+  // ✅ Prevent past date
+  const selectedDate = new Date(editTaskData.value.dueDateTime)
+  const now = new Date()
+  if (selectedDate < now) {
+    $q.notify({
+      type: 'negative',
+      message: 'Due date cannot be in the past',
+    })
+    return // stop here, keep dialog open with same data
+  }
+
+  const payload = {
+    title: editTaskData.value.title,
+    description: editTaskData.value.description,
+    status: editTaskData.value.status,
+    dueDate: formatDueDate(editTaskData.value.dueDateTime),
+  }
+
+  try {
+    await taskStore.updateTask(editTaskData.value.id, payload)
+    editDialog.value = false // ✅ close only on success
+  } catch (err) {
+    console.error('Error updating task:', err)
+    // ❌ error notify handled in store
+  }
+}
+
+// Fetch tasks on mount
+onMounted(() => {
+  taskStore.fetchTasks(0, 5)
+})
+</script>
