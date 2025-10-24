@@ -1,10 +1,12 @@
-server:
-  port: 9093
 spring:
   application:
     name: gateway-service
   config:
-   import: optional:classpath:application-secrets.yml
+    import: optional:classpath:application-secrets.yml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9092/eureka/
 logging:
   pattern:
     correlation: "[%X{traceId:-},%X{spanId:-}]"
@@ -16,9 +18,26 @@ management:
   otlp:
     tracing:
       endpoint: http://localhost:4318/v1/traces
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9092/eureka/
+resilience4j:
+  circuitbreaker:
+    instances:
+
+      taskServiceCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        minimumNumberOfCalls: 5
+
+      authServiceCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        minimumNumberOfCalls: 5
+server:
+  port: 9093
 jwt:
-  expiration: 3600000  # 1 hour in milliseconds
+  expiration: 3600000 # 1 hour in milliseconds
