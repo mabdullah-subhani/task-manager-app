@@ -32,5 +32,19 @@ build/
 ### VS Code ###
 .vscode/
 
-# Ignore local secrets file
-/src/main/resources/application-secrets.yml
+# ======================================
+# H2 Database files (local runtime data)
+# ======================================
+*.mv.db
+*.trace.db
+/data/*.mv.db
+/data/*.trace.db
+
+# ======================================
+# Liquibase runtime / temp files
+# ======================================
+liquibase.properties
+databasechangelog.csv
+databasechangeloglock.csv
+*.diff.xml
+*.snapshot.xml
