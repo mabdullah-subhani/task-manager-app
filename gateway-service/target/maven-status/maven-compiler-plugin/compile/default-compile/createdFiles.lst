@@ -1,0 +1,10 @@
+com\demoproject\gatewayservice\controller\FallbackController.class
+com\demoproject\gatewayservice\config\GatewayRoutesConfig.class
+com\demoproject\gatewayservice\util\JwtUtil.class
+com\demoproject\gatewayservice\filter\ResponseLoggingPostFilter.class
+com\demoproject\gatewayservice\filter\JwtAuthenticationFilter.class
+com\demoproject\gatewayservice\GatewayServiceApplication.class
+com\demoproject\gatewayservice\config\CorsConfig.class
+com\demoproject\gatewayservice\config\JwtProperties.class
+com\demoproject\gatewayservice\config\SecurityConfig.class
+com\demoproject\gatewayservice\config\SpaFallbackConfig.class

@@ -1,0 +1,10 @@
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\config\CorsConfig.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\config\GatewayRoutesConfig.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\config\JwtProperties.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\config\SecurityConfig.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\config\SpaFallbackConfig.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\controller\FallbackController.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\filter\JwtAuthenticationFilter.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\filter\ResponseLoggingPostFilter.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\GatewayServiceApplication.java
+C:\Users\abdul\IdeaProjects\task-manager\gateway-service\src\main\java\com\demoproject\gatewayservice\util\JwtUtil.java
