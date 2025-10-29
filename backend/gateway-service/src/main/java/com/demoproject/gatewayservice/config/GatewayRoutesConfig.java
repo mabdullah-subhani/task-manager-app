@@ -4,28 +4,24 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 
 @Configuration
 public class GatewayRoutesConfig {
 
     @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    public RouteLocator customRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-
-                // Task Service Route
+                // Route for task-service
                 .route("task-service", r -> r.path("/tasks/**")
-                        .filters(f -> f
+                        .filters(f -> f.stripPrefix(0) // remove /tasks prefix
                                 .circuitBreaker(c -> c
-                                        .setName("taskServiceCircuitBreaker")
+                                        .setName("taskServiceCB")
                                         .setFallbackUri("forward:/fallback/tasks")))
                         .uri("lb://TASK-SERVICE"))
 
-                // Auth Service Route
+                // Route for auth-service
                 .route("auth-service", r -> r.path("/auth/**")
-                        .filters(f -> f
-                                .circuitBreaker(c -> c
-                                        .setName("authServiceCircuitBreaker")
-                                        .setFallbackUri("forward:/fallback/auth")))
                         .uri("lb://AUTH-SERVICE"))
 
                 .build();
