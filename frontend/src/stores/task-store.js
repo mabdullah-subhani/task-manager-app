@@ -4,7 +4,8 @@ import { Notify } from 'quasar'
 
 export const useTaskStore = defineStore('tasks', {
   state: () => ({
-    tasks: [],
+    allTasks: [], // For paginated table
+    dashboardTasks: [], // Latest tasks for dashboard
     loading: false,
     page: 0,
     size: 10,
@@ -13,24 +14,52 @@ export const useTaskStore = defineStore('tasks', {
   }),
 
   getters: {
-    completedTasks: (state) => state.tasks.filter((t) => t.status === 'COMPLETED').length,
-    pendingTasks: (state) => state.tasks.filter((t) => t.status === 'PENDING').length,
+    completedTasks: (state) => state.allTasks.filter((t) => t.status === 'COMPLETED').length,
+    pendingTasks: (state) => state.allTasks.filter((t) => t.status === 'PENDING').length,
   },
 
   actions: {
-    async fetchTasks(page = this.page, size = this.size) {
+    // Fetch latest tasks for dashboard
+    async fetchDashboardTasks(latestCount = 5) {
       this.loading = true
       try {
-        const res = await api.get('/tasks', { params: { page, size } })
-        if (res.data?.data?.content) {
-          this.tasks = res.data.data.content
-          this.page = res.data.data.pageable.pageNumber
-          this.size = res.data.data.pageable.pageSize
-          this.totalPages = res.data.data.totalPages
-          this.totalElements = res.data.data.totalElements
-        } else {
-          this.tasks = []
-        }
+        const res = await api.get('/tasks', { params: { page: 0, size: 1000 } })
+        const tasks = res.data?.data?.content || []
+
+        // ✅ Update global task data for dashboard cards
+        this.allTasks = tasks
+        this.totalElements = tasks.length
+
+        this.dashboardTasks = tasks
+          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+          .slice(0, latestCount)
+      } catch (err) {
+        console.error('Error fetching dashboard tasks:', err)
+      } finally {
+        this.loading = false
+      }
+    },
+    // Fetch tasks for table with frontend sorting & pagination
+    async fetchTasks(page = 0, size = 10) {
+      this.loading = true
+      try {
+        // Fetch all tasks
+        const res = await api.get('/tasks', { params: { page: 0, size: 1000 } })
+        let tasks = res.data?.data?.content || []
+
+        // Sort by createdAt descending (latest first)
+        tasks = tasks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+
+        // Slice for current page
+        const start = page * size
+        const end = start + size
+        this.allTasks = tasks.slice(start, end)
+
+        // Update pagination info
+        this.totalElements = tasks.length
+        this.totalPages = Math.ceil(tasks.length / size)
+        this.page = page
+        this.size = size
       } catch (err) {
         console.error('Error fetching tasks:', err)
         Notify.create({ type: 'negative', message: 'Error fetching tasks' })
@@ -42,7 +71,8 @@ export const useTaskStore = defineStore('tasks', {
     async deleteTask(taskId) {
       try {
         await api.delete(`/tasks/${taskId}`)
-        this.tasks = this.tasks.filter((t) => t.id !== taskId)
+        this.allTasks = this.allTasks.filter((t) => t.id !== taskId)
+        this.dashboardTasks = this.dashboardTasks.filter((t) => t.id !== taskId)
         this.totalElements--
         Notify.create({ type: 'positive', message: 'Task deleted successfully' })
       } catch (err) {
@@ -54,8 +84,10 @@ export const useTaskStore = defineStore('tasks', {
     async addTask(newTask) {
       try {
         const res = await api.post('/tasks', newTask)
-        if (res.data?.data) {
-          this.tasks.unshift(res.data.data)
+        const task = res.data?.data
+        if (task) {
+          this.allTasks.unshift(task)
+          this.dashboardTasks.unshift(task)
           this.totalElements++
           Notify.create({ type: 'positive', message: 'Task added successfully' })
         }
@@ -68,8 +100,10 @@ export const useTaskStore = defineStore('tasks', {
     async updateTask(taskId, updatedTask) {
       try {
         const res = await api.patch(`/tasks/${taskId}`, updatedTask)
-        if (res.data?.data) {
-          this.tasks = this.tasks.map((t) => (t.id === taskId ? res.data.data : t))
+        const task = res.data?.data
+        if (task) {
+          this.allTasks = this.allTasks.map((t) => (t.id === taskId ? task : t))
+          this.dashboardTasks = this.dashboardTasks.map((t) => (t.id === taskId ? task : t))
           Notify.create({ type: 'positive', message: 'Task updated successfully' })
         }
       } catch (err) {

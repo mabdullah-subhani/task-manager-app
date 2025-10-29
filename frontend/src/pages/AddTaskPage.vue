@@ -98,11 +98,6 @@ const saveTask = async () => {
   try {
     await taskStore.addTask(payload)
 
-    $q.notify({
-      type: 'positive',
-      message: 'Task created successfully!',
-    })
-
     // ✅ Redirect only on success
     router.push('/dashboard/tasks')
   } catch (err) {

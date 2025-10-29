@@ -3,13 +3,44 @@
     <div class="text-h5 q-mb-md">My Tasks</div>
 
     <q-table
-      :rows="taskStore.tasks"
+      :rows="displayedTasks"
       :columns="columns"
       row-key="id"
       flat
       bordered
       title="Task List"
+      v-model:pagination="pagination"
+      :loading="taskStore.loading"
+      @request="onRequest"
     >
+      <!-- Title -->
+      <template v-slot:body-cell-title="props">
+        <q-td :props="props" style="white-space: pre-line; text-align: center; max-width: 300px">
+          {{ formatTitle(props.row.title) }}
+        </q-td>
+      </template>
+
+      <!-- Description -->
+      <template v-slot:body-cell-description="props">
+        <q-td :props="props" style="white-space: pre-line; text-align: left; max-width: 500px">
+          {{ formatDescription(props.row.description) }}
+        </q-td>
+      </template>
+
+      <!-- Status -->
+      <template v-slot:body-cell-status="props">
+        <q-td :props="props" align="center">
+          <q-badge
+            :color="props.row.status === 'COMPLETED' ? 'green' : 'orange'"
+            class="q-pa-sm text-white q-mx-sm"
+            rounded
+          >
+            {{ props.row.status }}
+          </q-badge>
+        </q-td>
+      </template>
+
+      <!-- Actions -->
       <template v-slot:body-cell-actions="props">
         <q-td align="right">
           <q-btn dense flat color="primary" icon="edit" @click="openEditDialog(props.row)" />
@@ -18,20 +49,13 @@
             flat
             color="negative"
             icon="delete"
-            @click="taskStore.deleteTask(props.row.id)"
+            @click="
+              async () => {
+                await taskStore.deleteTask(props.row.id)
+                await fetchTasks()
+              }
+            "
           />
-        </q-td>
-      </template>
-      <template v-slot:body-cell-status="props">
-        <q-td :props="props">
-          <q-badge
-            :color="props.row.status === 'COMPLETED' ? 'green' : 'orange'"
-            align="center"
-            class="q-pa-sm text-white"
-            rounded
-          >
-            {{ props.row.status }}
-          </q-badge>
         </q-td>
       </template>
     </q-table>
@@ -54,7 +78,6 @@
             label="Status"
             filled
           />
-          <!-- Due Date & Time -->
           <q-input
             v-model="editTaskData.dueDateTime"
             label="Due Date & Time"
@@ -74,7 +97,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useQuasar } from 'quasar'
 import { useTaskStore } from 'src/stores/task-store'
@@ -84,19 +107,57 @@ const taskStore = useTaskStore()
 const router = useRouter()
 const $q = useQuasar()
 
+// Table Columns
 const columns = [
-  { name: 'title', label: 'Title', field: 'title', sortable: true },
-  { name: 'description', label: 'Description', field: 'description', sortable: true },
-  { name: 'status', label: 'Status', field: 'status', sortable: true },
-  { name: 'dueDate', label: 'Due Date', field: 'dueDate', sortable: true },
-  { name: 'actions', label: 'Actions', field: 'actions', sortable: false },
+  { name: 'title', label: 'Title', field: 'title', sortable: true, align: 'center' },
+  { name: 'description', label: 'Description', field: 'description', align: 'center' },
+  { name: 'status', label: 'Status', field: 'status', sortable: true, align: 'center' },
+  { name: 'dueDate', label: 'Due Date', field: 'dueDate', sortable: true, align: 'center' },
+  { name: 'actions', label: 'Actions', field: 'actions', align: 'center' },
 ]
 
-// Edit dialog state
+// Pagination state
+const pagination = ref({
+  page: 1,
+  rowsPerPage: 10,
+  rowsNumber: 0,
+})
+
+// Fetch tasks for the current page
+const fetchTasks = async () => {
+  const pageIndex = pagination.value.page - 1 // backend pages are 0-indexed
+  const size = pagination.value.rowsPerPage <= 0 ? 1000 : pagination.value.rowsPerPage
+  await taskStore.fetchTasks(pageIndex, size)
+  pagination.value.rowsNumber = taskStore.totalElements
+}
+
+// Handle table pagination request
+const onRequest = async (props) => {
+  pagination.value.page = props.pagination.page
+  pagination.value.rowsPerPage = props.pagination.rowsPerPage
+  await fetchTasks()
+}
+
+// No need to slice locally; backend returns correct page
+const displayedTasks = computed(() => taskStore.allTasks)
+
+// Format helpers
+const formatDescription = (text, wordsPerLine = 15) => {
+  if (!text) return ''
+  const words = text.split(' ')
+  return words.map((w, i) => ((i + 1) % wordsPerLine === 0 ? w + '\n' : w)).join(' ')
+}
+
+const formatTitle = (text, wordsPerLine = 6) => {
+  if (!text) return ''
+  const words = text.split(' ')
+  return words.map((w, i) => ((i + 1) % wordsPerLine === 0 ? w + '\n' : w)).join(' ')
+}
+
+// Edit dialog
 const editDialog = ref(false)
 const editTaskData = ref({})
 
-// Open edit dialog
 const openEditDialog = (task) => {
   editTaskData.value = { ...task }
   if (editTaskData.value.dueDate) {
@@ -105,17 +166,11 @@ const openEditDialog = (task) => {
   editDialog.value = true
 }
 
-// Save updated task
 const saveTaskUpdate = async () => {
-  // ✅ Prevent past date
   const selectedDate = new Date(editTaskData.value.dueDateTime)
-  const now = new Date()
-  if (selectedDate < now) {
-    $q.notify({
-      type: 'negative',
-      message: 'Due date cannot be in the past',
-    })
-    return // stop here, keep dialog open with same data
+  if (selectedDate < new Date()) {
+    $q.notify({ type: 'negative', message: 'Due date cannot be in the past' })
+    return
   }
 
   const payload = {
@@ -125,21 +180,22 @@ const saveTaskUpdate = async () => {
     dueDate: formatDueDate(editTaskData.value.dueDateTime),
   }
 
-  try {
-    await taskStore.updateTask(editTaskData.value.id, payload)
-    editDialog.value = false // ✅ close only on success
-  } catch (err) {
-    console.error('Error updating task:', err)
-    // ❌ error notify handled in store
-  }
+  await taskStore.updateTask(editTaskData.value.id, payload)
+  editDialog.value = false
+  await fetchTasks()
 }
 
-// Add Task button
-const addTask = () => {
-  router.push('/dashboard/tasks/add')
-}
+// Add Task
+const addTask = () => router.push('/dashboard/tasks/add')
 
-onMounted(() => {
-  taskStore.fetchTasks()
-})
+// Initial fetch
+onMounted(fetchTasks)
 </script>
+
+<style scoped>
+.q-td {
+  white-space: pre-line !important;
+  word-break: break-word !important;
+  line-height: 1.5;
+}
+</style>
