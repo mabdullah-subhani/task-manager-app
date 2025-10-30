@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-Task Manager is a **microservices-based application** that allows users to manage their daily tasks with secure authentication.
+Task Manager is a **microservices-based application** that allows users to manage their daily tasks with secure authentication.  
 The backend is built with **Spring Boot microservices**, while the frontend is built with **Vue.js (Quasar Framework)**.
 
 This repository contains:
@@ -29,7 +29,6 @@ This repository contains:
 ### 🔹 3. Task Service (Port: `9094`)
 
 * Manages CRUD operations for tasks:
-
   * ✅ Create tasks with deadlines
   * ✏️ Update tasks
   * ⏳ Mark tasks as Pending / Completed
@@ -48,12 +47,12 @@ The frontend is a **Single Page Application (SPA)** already built and included i
 
 ### Pages Included:
 
-* 🔑 **Login Page** → User login via JWT
-* 🆕 **Register Page** → New user signup
-* 📊 **Dashboard** → Displays all tasks (Pending / Completed)
-* ➕ **Add Task Page** → Create new tasks with due dates
-* ✏️ **Edit Task Page** → Update tasks or mark as completed
-* 👤 **Profile Management** → Update username & password securely
+* 🔑 **Login Page** → User login via JWT  
+* 🆕 **Register Page** → New user signup  
+* 📊 **Dashboard** → Displays all tasks (Pending / Completed)  
+* ➕ **Add Task Page** → Create new tasks with due dates  
+* ✏️ **Edit Task Page** → Update tasks or mark as completed  
+* 👤 **Profile Management** → Update username & password securely  
 
 ---
 
@@ -61,7 +60,7 @@ The frontend is a **Single Page Application (SPA)** already built and included i
 
 ### 1️⃣ Prerequisites
 
-* Install **Java 17+**
+* Install **Java 17+**  
 * Install **Node.js (with npm)**
 
 ---
@@ -89,12 +88,45 @@ java -jar task-service.jar
 java -jar gateway-service.jar
 ```
 
-* 📌 Eureka Dashboard → [http://localhost:9092](http://localhost:9092)
-* 📌 Gateway (entry point) → [http://localhost:9093](http://localhost:9093)
+📌 Eureka Dashboard → http://localhost:9092  
+📌 Gateway (entry point) → http://localhost:9093  
+
+---
 
 #### 👉 Option B – Run from Source Code
 
 If you want to build manually:
+
+⚠️ **Important – Set JWT Secret Key**
+
+Before running from source, you must set a `JWT_SECRET` environment variable on your system.  
+This key is required by Auth Service and Gateway Service to generate and validate JWT tokens.
+
+The secret key must follow a base64-encoded string format, similar to:
+
+```
+Example: AbCdEfGhIjKlMnOpQrStUvWxYz1234567890+/=
+```
+
+You can create your own secret but make sure it keeps the same pattern.
+
+Once created, set it as an environment variable:
+
+**For Windows (PowerShell):**
+```bash
+setx JWT_SECRET "your_base64_encoded_secret_here"
+```
+
+**For macOS/Linux:**
+```bash
+export JWT_SECRET="your_base64_encoded_secret_here"
+```
+
+💡 In IntelliJ IDEA, you can also define this variable under:  
+`Run → Edit Configurations → Environment Variables`  
+and set `JWT_SECRET` there for both **auth-service** and **gateway-service**.
+
+Now build and run each service:
 
 ```sh
 cd backend/eureka-server
@@ -118,7 +150,7 @@ java -jar target/gateway-service-0.0.1-SNAPSHOT.jar
 
 ### 3️⃣ Run Frontend
 
-You also have **two options**:
+You also have two options:
 
 #### 👉 Option A – Run from Release Build (recommended)
 
@@ -129,7 +161,9 @@ cd release-frontend
 npx serve .
 ```
 
-📌 Access → [http://localhost:3000](http://localhost:3000)
+📌 Access → http://localhost:3000  
+
+---
 
 #### 👉 Option B – Run from Source Code
 
@@ -145,19 +179,18 @@ quasar dev
 
 ## ✅ Project Flow
 
-1. Start **Eureka Server** (`9092`)
-2. Start **Auth Service** (`9090`)
-3. Start **Task Service** (`9094`)
-4. Start **Gateway Service** (`9093`)
-5. Run frontend with `npx serve .` inside `/release-frontend` → open [http://localhost:3000](http://localhost:3000)
+1️⃣ Start **Eureka Server (9092)**  
+2️⃣ Start **Auth Service (9090)**  
+3️⃣ Start **Task Service (9094)**  
+4️⃣ Start **Gateway Service (9093)**  
+5️⃣ Run frontend with `npx serve .` inside `/release-frontend` → open `http://localhost:3000`
 
 ---
 
 ## 🚀 Features Recap
 
-* 🔐 **Secure Authentication (JWT)**
-* 📋 **Task Management** (Add, Edit, Delete, Pending/Completed)
-* ⚡ **Microservices-based Architecture**
-* 🌐 **API Gateway with centralized routing**
+* 🔐 **Secure Authentication (JWT)**  
+* 📋 **Task Management (Add, Edit, Delete, Pending/Completed)**  
+* ⚡ **Microservices-based Architecture**  
+* 🌐 **API Gateway with centralized routing**  
 * 🎨 **SPA frontend ready-to-serve (no build required)**
-
