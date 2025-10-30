@@ -56,6 +56,36 @@ The frontend is a **Single Page Application (SPA)** already built and included i
 
 ---
 
+## 🖼️ Application Screenshots
+
+Below are the main pages of the Task Manager Application.
+
+### 🔑 Login Page
+User login screen showing JWT-based authentication.  
+![Login](./screenshots/login.png)
+
+### 🆕 Register Page
+New user signup form for creating an account.  
+![Register](./screenshots/register.png)
+
+### 📊 Dashboard
+Displays all tasks (Pending / Completed) for the logged-in user.  
+![Dashboard](./screenshots/dashboard.png)
+
+### ➕ Add Task Page
+Create new tasks with titles, deadlines, and descriptions.  
+![Add Task](./screenshots/add-task.png)
+
+### ✏️ Edit Task Page
+Update task information or mark tasks as completed.  
+![Edit Task](./screenshots/edit-task.png)
+
+### 👤 Profile Management
+Manage user account details — update username and password securely.  
+![Profile](./screenshots/profile.png)
+
+---
+
 ## ⚙️ Setup Manual
 
 ### 1️⃣ Prerequisites
