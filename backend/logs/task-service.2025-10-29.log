@@ -1,0 +1,1113 @@
+2025-10-29 10:45:34.309 [background-preinit] INFO  [task-service,,] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-29 10:45:34.448 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - Starting TaskServiceApplication using Java 17.0.12 with PID 17288 (C:\Users\abdul\IdeaProjects\task-manager-app\backend\task-service\target\classes started by abdul in C:\Users\abdul\IdeaProjects\task-manager-app\backend)
+2025-10-29 10:45:34.451 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-29 10:45:36.290 [main] INFO  [task-service,,] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-29 10:45:36.446 [main] INFO  [task-service,,] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 146 ms. Found 1 JPA repository interface.
+2025-10-29 10:45:37.010 [main] INFO  [task-service,,] o.s.cloud.context.scope.GenericScope - BeanFactory id=3925606e-fe30-3cd9-b03f-260ec0833973
+2025-10-29 10:45:37.574 [main] INFO  [task-service,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9094 (http)
+2025-10-29 10:45:37.586 [main] INFO  [task-service,,] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9094"]
+2025-10-29 10:45:37.588 [main] INFO  [task-service,,] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-29 10:45:37.588 [main] INFO  [task-service,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29 10:45:37.663 [main] INFO  [task-service,,] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-29 10:45:37.664 [main] INFO  [task-service,,] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2982 ms
+2025-10-29 10:45:37.873 [main] INFO  [task-service,,] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-29 10:45:37.926 [main] INFO  [task-service,,] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-29 10:45:37.964 [main] INFO  [task-service,,] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-29 10:45:38.261 [main] INFO  [task-service,,] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-29 10:45:38.305 [main] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-29 10:45:38.542 [main] INFO  [task-service,,] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/tasks-service user=SA
+2025-10-29 10:45:38.544 [main] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-29 10:45:38.608 [main] INFO  [task-service,,] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-29 10:45:39.878 [main] INFO  [task-service,,] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-29 10:45:39.930 [main] INFO  [task-service,,] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29 10:45:40.337 [main] WARN  [task-service,,] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-29 10:45:40.399 [main] WARN  [task-service,,] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2194b927-31f0-4b74-9d05-ac16bb8a9895
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-29 10:45:40.405 [main] INFO  [task-service,,] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-29 10:45:41.230 [main] INFO  [task-service,,] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-10-29 10:45:41.266 [main] WARN  [task-service,,] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-29 10:45:41.316 [main] INFO  [task-service,,] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-10-29 10:45:41.337 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-10-29 10:45:41.341 [main] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 10:45:41.349 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-10-29 10:45:41.350 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-10-29 10:45:41.350 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-10-29 10:45:41.350 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-10-29 10:45:41.350 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-10-29 10:45:41.350 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-10-29 10:45:41.350 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-10-29 10:45:41.717 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-10-29 10:45:41.720 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-10-29 10:45:41.722 [main] INFO  [task-service,,] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-29 10:45:41.723 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1761716741723 with initial instances count: 0
+2025-10-29 10:45:41.727 [main] INFO  [task-service,,] o.s.c.n.e.s.EurekaServiceRegistry - Registering application TASK-SERVICE with eureka with status UP
+2025-10-29 10:45:41.727 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1761716741727, current=UP, previous=STARTING]
+2025-10-29 10:45:41.729 [main] INFO  [task-service,,] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9094"]
+2025-10-29 10:45:41.729 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094: registering service...
+2025-10-29 10:45:41.756 [main] INFO  [task-service,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9094 (http) with context path '/'
+2025-10-29 10:45:41.756 [main] INFO  [task-service,,] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9094
+2025-10-29 10:45:41.774 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094 - registration status: 204
+2025-10-29 10:45:41.840 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - Started TaskServiceApplication in 8.878 seconds (process running for 10.331)
+2025-10-29 10:45:41.995 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-10-29 10:46:11.720 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-10-29 10:46:11.755 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-10-29 10:46:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:47:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:48:41.855 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:48:42.894 [http-nio-9094-exec-1] INFO  [task-service,,] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-29 10:48:42.894 [http-nio-9094-exec-1] INFO  [task-service,,] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-29 10:48:42.896 [http-nio-9094-exec-1] INFO  [task-service,,] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-10-29 10:48:42.979 [http-nio-9094-exec-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:43.006 [http-nio-9094-exec-1] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:43.047 [http-nio-9094-exec-1] WARN  [task-service,,] o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-10-29 10:48:49.738 [http-nio-9094-exec-3] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:49.741 [http-nio-9094-exec-3] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:51.044 [http-nio-9094-exec-4] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:51.047 [http-nio-9094-exec-4] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:51.942 [http-nio-9094-exec-2] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:51.946 [http-nio-9094-exec-2] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:52.762 [http-nio-9094-exec-9] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:52.764 [http-nio-9094-exec-9] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:53.651 [http-nio-9094-exec-6] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:53.654 [http-nio-9094-exec-6] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:54.593 [http-nio-9094-exec-7] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:54.596 [http-nio-9094-exec-7] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:56.514 [http-nio-9094-exec-8] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:56.516 [http-nio-9094-exec-8] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:57.719 [http-nio-9094-exec-5] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:57.721 [http-nio-9094-exec-5] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:48:59.010 [http-nio-9094-exec-10] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:48:59.012 [http-nio-9094-exec-10] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:00.262 [http-nio-9094-exec-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:00.265 [http-nio-9094-exec-1] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:01.652 [http-nio-9094-exec-3] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:01.654 [http-nio-9094-exec-3] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:03.165 [http-nio-9094-exec-4] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:03.167 [http-nio-9094-exec-4] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:22.152 [http-nio-9094-exec-2] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:22.154 [http-nio-9094-exec-2] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:28.716 [http-nio-9094-exec-9] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:28.717 [http-nio-9094-exec-9] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:29.738 [http-nio-9094-exec-6] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:29.740 [http-nio-9094-exec-6] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:30.645 [http-nio-9094-exec-7] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:30.646 [http-nio-9094-exec-7] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:31.342 [http-nio-9094-exec-8] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:31.344 [http-nio-9094-exec-8] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:32.028 [http-nio-9094-exec-5] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 10:49:32.033 [http-nio-9094-exec-5] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 10:49:41.843 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:50:41.353 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 10:50:41.857 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:51:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:52:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:53:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:54:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:55:41.366 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 10:55:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:56:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:57:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:58:41.860 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 10:59:41.851 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:00:26.155 [http-nio-9094-exec-8] INFO  [task-service,,] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 454 ms
+2025-10-29 11:00:28.626 [http-nio-9094-exec-5] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:00:28.627 [http-nio-9094-exec-5] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:00:41.380 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:00:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:00:43.371 [http-nio-9094-exec-10] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:00:43.371 [http-nio-9094-exec-10] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:00:46.950 [http-nio-9094-exec-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:00:46.951 [http-nio-9094-exec-1] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:00:49.049 [http-nio-9094-exec-4] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:00:49.050 [http-nio-9094-exec-4] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:00:50.719 [http-nio-9094-exec-3] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:00:50.721 [http-nio-9094-exec-3] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:00:52.628 [http-nio-9094-exec-9] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:00:52.629 [http-nio-9094-exec-9] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:01:15.628 [http-nio-9094-exec-6] DEBUG [task-service,,] org.hibernate.SQL - select next value for tasks_seq
+2025-10-29 11:01:15.686 [http-nio-9094-exec-6] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah created task with ID 12
+2025-10-29 11:01:15.713 [http-nio-9094-exec-6] DEBUG [task-service,,] org.hibernate.SQL - insert into tasks (created_at,created_by,description,due_date,status,title,updated_at,updated_by,username,id) values (?,?,?,?,?,?,?,?,?,?)
+2025-10-29 11:01:15.830 [http-nio-9094-exec-2] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:01:15.831 [http-nio-9094-exec-2] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 11 tasks (filter=null)
+2025-10-29 11:01:19.523 [http-nio-9094-exec-7] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:01:19.525 [http-nio-9094-exec-7] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 11 tasks (filter=null)
+2025-10-29 11:01:23.446 [http-nio-9094-exec-8] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.id=?
+2025-10-29 11:01:23.448 [http-nio-9094-exec-8] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah deleted task 12
+2025-10-29 11:01:23.456 [http-nio-9094-exec-8] DEBUG [task-service,,] org.hibernate.SQL - delete from tasks where id=?
+2025-10-29 11:01:23.490 [http-nio-9094-exec-5] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:01:23.496 [http-nio-9094-exec-5] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:01:28.096 [http-nio-9094-exec-6] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:01:28.098 [http-nio-9094-exec-6] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:01:33.779 [http-nio-9094-exec-2] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:01:33.783 [http-nio-9094-exec-2] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:01:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:02:14.575 [http-nio-9094-exec-7] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:02:14.577 [http-nio-9094-exec-7] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:02:22.705 [http-nio-9094-exec-8] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:02:22.705 [http-nio-9094-exec-8] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:02:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:03:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:04:41.856 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:05:41.389 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:05:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:05:52.773 [http-nio-9094-exec-3] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:05:52.778 [http-nio-9094-exec-3] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:06:01.370 [http-nio-9094-exec-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.username=? fetch first ? rows only
+2025-10-29 11:06:01.370 [http-nio-9094-exec-1] INFO  [task-service,,] c.d.taskservice.service.TaskService - User abdullah retrieved 10 tasks (filter=null)
+2025-10-29 11:06:41.860 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:07:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:08:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:09:41.854 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:10:41.396 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:10:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:11:41.846 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:12:41.852 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:13:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:14:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:15:41.406 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:15:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:16:41.843 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:17:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:18:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:19:41.856 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:20:41.422 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:20:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:21:41.842 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:22:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:23:41.856 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:24:41.851 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:25:41.431 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:25:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:26:41.854 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:27:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:28:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:29:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:30:41.442 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:30:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:31:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:32:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:33:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:34:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:35:41.458 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:35:41.854 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:36:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:37:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:38:41.851 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:39:41.856 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:40:41.468 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:40:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:41:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:42:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:43:41.843 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:44:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:45:41.469 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:45:41.855 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:46:41.852 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:47:41.856 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:48:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:49:41.840 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:50:41.481 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:50:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:51:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:52:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:53:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:54:41.854 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:55:41.482 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 11:55:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:56:41.846 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:57:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:58:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 11:59:41.846 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:00:41.488 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:00:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:01:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:02:41.843 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:03:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:04:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:05:41.497 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:05:41.846 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:06:41.841 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:07:41.840 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:08:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:09:41.845 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:10:41.514 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:10:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:11:41.856 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:12:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:13:41.851 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:14:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:15:41.521 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:15:41.849 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:16:41.854 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:17:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:18:41.860 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:19:41.839 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:20:41.528 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:20:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:21:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:22:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:23:41.852 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:24:41.842 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:25:41.538 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:25:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:26:41.844 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:27:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:28:41.852 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:29:41.850 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:30:41.559 [AsyncResolver-bootstrap-executor-%d] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:30:41.852 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:31:41.853 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:32:41.848 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:33:41.855 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:34:41.847 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:35:31.519 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application TASK-SERVICE with eureka with status DOWN
+2025-10-29 12:35:31.519 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1761723331519, current=DOWN, previous=UP]
+2025-10-29 12:35:31.522 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094: registering service...
+2025-10-29 12:35:31.532 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29 12:35:31.563 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094 - registration status: 204
+2025-10-29 12:35:32.252 [tomcat-shutdown] INFO  [task-service,,] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-29 12:35:32.273 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29 12:35:32.278 [SpringApplicationShutdownHook] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-29 12:35:32.293 [SpringApplicationShutdownHook] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-29 12:35:32.294 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-10-29 12:35:35.299 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-10-29 12:35:35.335 [SpringApplicationShutdownHook] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/} exception=I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9092 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 39 more
+
+2025-10-29 12:35:35.335 [SpringApplicationShutdownHook] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+2025-10-29 12:35:35.377 [SpringApplicationShutdownHook] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/}, exception=I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9092 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 40 more
+
+2025-10-29 12:35:35.378 [SpringApplicationShutdownHook] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+2025-10-29 12:35:35.378 [SpringApplicationShutdownHook] ERROR [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-29 12:35:35.380 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-10-29 12:52:44.638 [background-preinit] INFO  [task-service,,] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-29 12:52:44.722 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - Starting TaskServiceApplication using Java 17.0.12 with PID 14728 (C:\Users\abdul\IdeaProjects\task-manager-app\backend\task-service\target\classes started by abdul in C:\Users\abdul\IdeaProjects\task-manager-app\backend)
+2025-10-29 12:52:44.723 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-29 12:52:45.811 [main] INFO  [task-service,,] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-29 12:52:46.047 [main] INFO  [task-service,,] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 223 ms. Found 1 JPA repository interface.
+2025-10-29 12:52:46.460 [main] INFO  [task-service,,] o.s.cloud.context.scope.GenericScope - BeanFactory id=3925606e-fe30-3cd9-b03f-260ec0833973
+2025-10-29 12:52:47.138 [main] INFO  [task-service,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9094 (http)
+2025-10-29 12:52:47.149 [main] INFO  [task-service,,] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9094"]
+2025-10-29 12:52:47.151 [main] INFO  [task-service,,] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-29 12:52:47.151 [main] INFO  [task-service,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29 12:52:47.216 [main] INFO  [task-service,,] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-29 12:52:47.216 [main] INFO  [task-service,,] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2421 ms
+2025-10-29 12:52:47.413 [main] INFO  [task-service,,] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-29 12:52:47.481 [main] INFO  [task-service,,] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-29 12:52:47.537 [main] INFO  [task-service,,] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-29 12:52:47.826 [main] INFO  [task-service,,] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-29 12:52:47.860 [main] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-29 12:52:48.063 [main] INFO  [task-service,,] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/tasks-service user=SA
+2025-10-29 12:52:48.065 [main] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-29 12:52:48.125 [main] INFO  [task-service,,] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-29 12:52:48.972 [main] INFO  [task-service,,] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-29 12:52:49.027 [main] INFO  [task-service,,] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29 12:52:49.424 [main] WARN  [task-service,,] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-29 12:52:49.492 [main] WARN  [task-service,,] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 03a85b20-cd03-4a17-a0a6-d039670e0797
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-29 12:52:49.499 [main] INFO  [task-service,,] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-29 12:52:50.299 [main] INFO  [task-service,,] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-10-29 12:52:50.335 [main] WARN  [task-service,,] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-29 12:52:50.390 [main] INFO  [task-service,,] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-10-29 12:52:50.411 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-10-29 12:52:50.415 [main] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-10-29 12:52:50.424 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-10-29 12:52:50.786 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-10-29 12:52:50.788 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-10-29 12:52:50.789 [main] INFO  [task-service,,] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-29 12:52:50.792 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1761724370792 with initial instances count: 0
+2025-10-29 12:52:50.796 [main] INFO  [task-service,,] o.s.c.n.e.s.EurekaServiceRegistry - Registering application TASK-SERVICE with eureka with status UP
+2025-10-29 12:52:50.797 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1761724370797, current=UP, previous=STARTING]
+2025-10-29 12:52:50.798 [main] INFO  [task-service,,] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9094"]
+2025-10-29 12:52:50.798 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094: registering service...
+2025-10-29 12:52:50.820 [main] INFO  [task-service,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9094 (http) with context path '/'
+2025-10-29 12:52:50.821 [main] INFO  [task-service,,] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9094
+2025-10-29 12:52:50.840 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094 - registration status: 204
+2025-10-29 12:52:50.909 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - Started TaskServiceApplication in 7.261 seconds (process running for 8.56)
+2025-10-29 12:52:51.042 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:52:59.994 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application TASK-SERVICE with eureka with status DOWN
+2025-10-29 12:52:59.995 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1761724379995, current=DOWN, previous=UP]
+2025-10-29 12:52:59.995 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094: registering service...
+2025-10-29 12:52:59.999 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29 12:53:00.006 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/} exception=I/O error on POST request for "http://localhost:9092/eureka/apps/TASK-SERVICE": localhost:9092 failed to respond stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9092/eureka/apps/TASK-SERVICE": localhost:9092 failed to respond
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.core5.http.NoHttpResponseException: localhost:9092 failed to respond
+	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:333)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:196)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.lambda$execute$0(InternalExecRuntime.java:236)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:791)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:233)
+	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:120)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:200)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 21 more
+
+2025-10-29 12:53:00.007 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:9092/eureka/apps/TASK-SERVICE": localhost:9092 failed to respond
+2025-10-29 12:53:00.026 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/}, exception=I/O error on POST request for "http://localhost:9092/eureka/apps/TASK-SERVICE": An established connection was aborted by the software in your host machine stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9092/eureka/apps/TASK-SERVICE": An established connection was aborted by the software in your host machine
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: An established connection was aborted by the software in your host machine
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:250)
+	at org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:56)
+	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:331)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:196)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.lambda$execute$0(InternalExecRuntime.java:236)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:791)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:233)
+	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:120)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:200)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-10-29 12:53:00.027 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:9092/eureka/apps/TASK-SERVICE": An established connection was aborted by the software in your host machine
+2025-10-29 12:53:00.027 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-29 12:53:00.031 [DiscoveryClient-InstanceInfoReplicator-%d] WARN  [task-service,,] c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-29 12:53:00.206 [tomcat-shutdown] INFO  [task-service,,] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-29 12:53:00.215 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29 12:53:00.217 [SpringApplicationShutdownHook] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-29 12:53:00.245 [SpringApplicationShutdownHook] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-29 12:53:00.246 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-10-29 12:53:03.262 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-10-29 12:53:03.310 [SpringApplicationShutdownHook] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/}, exception=I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9092 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 40 more
+
+2025-10-29 12:53:03.311 [SpringApplicationShutdownHook] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/192.168.10.7:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+2025-10-29 12:53:03.311 [SpringApplicationShutdownHook] ERROR [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/192.168.10.7:task-service:9094 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-29 12:53:03.311 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-10-29 12:54:01.106 [background-preinit] INFO  [task-service,,] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-10-29 12:54:01.153 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - Starting TaskServiceApplication using Java 17.0.12 with PID 18136 (C:\Users\abdul\IdeaProjects\task-manager-app\backend\task-service\target\classes started by abdul in C:\Users\abdul\IdeaProjects\task-manager-app\backend)
+2025-10-29 12:54:01.154 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-29 12:54:02.082 [main] INFO  [task-service,,] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-29 12:54:02.254 [main] INFO  [task-service,,] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 163 ms. Found 1 JPA repository interface.
+2025-10-29 12:54:02.548 [main] INFO  [task-service,,] o.s.cloud.context.scope.GenericScope - BeanFactory id=3925606e-fe30-3cd9-b03f-260ec0833973
+2025-10-29 12:54:03.046 [main] INFO  [task-service,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9094 (http)
+2025-10-29 12:54:03.059 [main] INFO  [task-service,,] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9094"]
+2025-10-29 12:54:03.060 [main] INFO  [task-service,,] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-29 12:54:03.061 [main] INFO  [task-service,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-29 12:54:03.128 [main] INFO  [task-service,,] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-29 12:54:03.129 [main] INFO  [task-service,,] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1929 ms
+2025-10-29 12:54:03.305 [main] INFO  [task-service,,] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-29 12:54:03.362 [main] INFO  [task-service,,] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-29 12:54:03.396 [main] INFO  [task-service,,] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-29 12:54:03.678 [main] INFO  [task-service,,] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-29 12:54:03.713 [main] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-29 12:54:03.937 [main] INFO  [task-service,,] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/tasks-service user=SA
+2025-10-29 12:54:03.939 [main] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-29 12:54:04.002 [main] INFO  [task-service,,] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-29 12:54:04.906 [main] INFO  [task-service,,] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-29 12:54:04.958 [main] INFO  [task-service,,] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29 12:54:05.356 [main] WARN  [task-service,,] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-29 12:54:05.423 [main] WARN  [task-service,,] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 76aae6bb-aa61-49fd-8771-703001f8cbfc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-29 12:54:05.431 [main] INFO  [task-service,,] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-29 12:54:06.225 [main] INFO  [task-service,,] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-10-29 12:54:06.262 [main] WARN  [task-service,,] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-29 12:54:06.313 [main] INFO  [task-service,,] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-10-29 12:54:06.335 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-10-29 12:54:06.339 [main] INFO  [task-service,,] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-10-29 12:54:06.347 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-10-29 12:54:06.723 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-10-29 12:54:06.724 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-10-29 12:54:06.726 [main] INFO  [task-service,,] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-29 12:54:06.727 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1761724446727 with initial instances count: 0
+2025-10-29 12:54:06.731 [main] INFO  [task-service,,] o.s.c.n.e.s.EurekaServiceRegistry - Registering application TASK-SERVICE with eureka with status UP
+2025-10-29 12:54:06.732 [main] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1761724446732, current=UP, previous=STARTING]
+2025-10-29 12:54:06.733 [main] INFO  [task-service,,] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9094"]
+2025-10-29 12:54:06.734 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/localhost:task-service:9094: registering service...
+2025-10-29 12:54:06.759 [main] INFO  [task-service,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9094 (http) with context path '/'
+2025-10-29 12:54:06.760 [main] INFO  [task-service,,] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9094
+2025-10-29 12:54:06.780 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/localhost:task-service:9094 - registration status: 204
+2025-10-29 12:54:06.847 [main] INFO  [task-service,,] c.d.t.TaskServiceApplication - Started TaskServiceApplication in 7.598 seconds (process running for 8.831)
+2025-10-29 12:54:06.983 [scheduling-1] DEBUG [task-service,,] org.hibernate.SQL - select t1_0.id,t1_0.created_at,t1_0.created_by,t1_0.description,t1_0.due_date,t1_0.status,t1_0.title,t1_0.updated_at,t1_0.updated_by,t1_0.username from tasks t1_0 where t1_0.status=? and t1_0.due_date<?
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-10-29 12:54:36.727 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-10-29 12:54:36.741 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-10-29 12:54:53.866 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application TASK-SERVICE with eureka with status DOWN
+2025-10-29 12:54:53.867 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1761724493867, current=DOWN, previous=UP]
+2025-10-29 12:54:53.867 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/localhost:task-service:9094: registering service...
+2025-10-29 12:54:53.871 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-29 12:54:53.878 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/localhost:task-service:9094 - registration status: 204
+2025-10-29 12:54:54.063 [tomcat-shutdown] INFO  [task-service,,] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-29 12:54:54.070 [SpringApplicationShutdownHook] INFO  [task-service,,] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-29 12:54:54.072 [SpringApplicationShutdownHook] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-29 12:54:54.167 [SpringApplicationShutdownHook] INFO  [task-service,,] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-29 12:54:54.168 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-10-29 12:54:57.176 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-10-29 12:54:57.217 [SpringApplicationShutdownHook] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/} exception=I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/localhost:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/localhost:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9092 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 39 more
+
+2025-10-29 12:54:57.218 [SpringApplicationShutdownHook] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/localhost:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+2025-10-29 12:54:57.255 [SpringApplicationShutdownHook] INFO  [task-service,,] c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:9092/eureka/}, exception=I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/localhost:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/localhost:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9092 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 40 more
+
+2025-10-29 12:54:57.255 [SpringApplicationShutdownHook] WARN  [task-service,,] c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:9092/eureka/apps/TASK-SERVICE/localhost:task-service:9094": Connect to http://localhost:9092 failed: Connection refused: no further information
+2025-10-29 12:54:57.255 [SpringApplicationShutdownHook] ERROR [task-service,,] c.netflix.discovery.DiscoveryClient - DiscoveryClient_TASK-SERVICE/localhost:task-service:9094 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1482)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-29 12:54:57.258 [SpringApplicationShutdownHook] INFO  [task-service,,] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
